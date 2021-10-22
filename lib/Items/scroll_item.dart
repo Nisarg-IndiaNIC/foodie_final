@@ -56,7 +56,9 @@ class _ScrollItemsState extends State<ScrollItems> {
                       padding: const EdgeInsets.all(16),
                       margin: const EdgeInsets.only(right: 130),
                       decoration: BoxDecoration(
-                          color: select == 'first' ? Colors.red : Colors.white,
+                          color: select == 'first'
+                              ? Colors.red
+                              : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
                         children: [
@@ -67,7 +69,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                                   borderRadius: BorderRadius.circular(90),
                                   color: select == 'first'
                                       ? Colors.white
-                                      : Colors.white),
+                                      : Colors.transparent),
                               child: Image.asset('assets/pizza.png')),
                           const SizedBox(
                             width: 20,
@@ -102,7 +104,8 @@ class _ScrollItemsState extends State<ScrollItems> {
                       height: 122,
                       width: 383,
                       decoration: BoxDecoration(
-                          color: select == 'sec' ? Colors.red : Colors.white,
+                          color:
+                              select == 'sec' ? Colors.red : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
                         children: [
@@ -114,7 +117,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                                   borderRadius: BorderRadius.circular(90),
                                   color: select == 'sec'
                                       ? Colors.white
-                                      : Colors.white),
+                                      : Colors.transparent),
                               child: Image.asset('assets/hamburger.png')),
                           const SizedBox(
                             width: 20,
@@ -147,7 +150,9 @@ class _ScrollItemsState extends State<ScrollItems> {
                       height: 122,
                       width: 383,
                       decoration: BoxDecoration(
-                          color: select == 'third' ? Colors.red : Colors.white,
+                          color: select == 'third'
+                              ? Colors.red
+                              : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
                         children: [
@@ -159,7 +164,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                                   borderRadius: BorderRadius.circular(90),
                                   color: select == 'third'
                                       ? Colors.white
-                                      : Colors.white),
+                                      : Colors.transparent),
                               child: Image.asset('assets/rice.png')),
                           const SizedBox(
                             width: 20,
@@ -192,7 +197,9 @@ class _ScrollItemsState extends State<ScrollItems> {
                       height: 122,
                       width: 383,
                       decoration: BoxDecoration(
-                          color: select == 'fourth' ? Colors.red : Colors.white,
+                          color: select == 'fourth'
+                              ? Colors.red
+                              : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
                         children: [
@@ -204,7 +211,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                                   borderRadius: BorderRadius.circular(90),
                                   color: select == 'fourth'
                                       ? Colors.white
-                                      : Colors.white),
+                                      : Colors.transparent),
                               child: Image.asset('assets/donut.png')),
                           const SizedBox(
                             width: 20,
@@ -237,7 +244,9 @@ class _ScrollItemsState extends State<ScrollItems> {
                       height: 122,
                       width: 383,
                       decoration: BoxDecoration(
-                          color: select == 'five' ? Colors.red : Colors.white,
+                          color: select == 'five'
+                              ? Colors.red
+                              : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
                         children: [
@@ -249,7 +258,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                                   borderRadius: BorderRadius.circular(90),
                                   color: select == 'five'
                                       ? Colors.white
-                                      : Colors.white),
+                                      : Colors.transparent),
                               child: Image.asset('assets/ice.png')),
                           const SizedBox(
                             width: 20,
