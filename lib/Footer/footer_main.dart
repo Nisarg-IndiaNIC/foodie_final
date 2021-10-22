@@ -12,6 +12,11 @@ class FooterMain extends StatefulWidget {
 }
 
 class _FooterMainState extends State<FooterMain> {
+  String select = 'first';
+  bool isHelp = false;
+  bool isPrivacy = false;
+  bool isTerm = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -64,32 +69,71 @@ class _FooterMainState extends State<FooterMain> {
                     children: [
                       InkWell(
                         onTap: () {},
-                        child:const Text(
-                          'Help',
-                          style:
-                              TextStyle(color: Color(0xff161616), fontSize: 20),
+                        child: MouseRegion(
+                          onEnter: (f) {
+                            setState(() {
+                              isHelp = true;
+                            });
+                          },
+                          onExit: (f) {
+                            setState(() {
+                              isHelp = false;
+                            });
+                          },
+                          child: Text('Help',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: isHelp
+                                      ? const Color(0xffff5344)
+                                      : Colors.black)),
                         ),
                       ),
-                    const  SizedBox(
+                      const SizedBox(
                         width: 40,
                       ),
                       InkWell(
                         onTap: () {},
-                        child:const Text(
-                          'Privacy',
-                          style:
-                              TextStyle(color: Color(0xff161616), fontSize: 20),
+                        child: MouseRegion(
+                          onEnter: (f) {
+                            setState(() {
+                              isPrivacy = true;
+                            });
+                          },
+                          onExit: (f) {
+                            setState(() {
+                              isPrivacy = false;
+                            });
+                          },
+                          child: Text('Privacy',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: isPrivacy
+                                      ? const Color(0xffff5344)
+                                      : Colors.black)),
                         ),
                       ),
-                    const  SizedBox(
+                      const SizedBox(
                         width: 40,
                       ),
                       InkWell(
                         onTap: () {},
-                        child:const Text(
-                          'Term',
-                          style:
-                              TextStyle(color: Color(0xff161616), fontSize: 20),
+                        child: MouseRegion(
+                          onEnter: (f) {
+                            setState(() {
+                              isTerm = true;
+                            });
+                          },
+                          onExit: (f) {
+                            setState(() {
+                              isTerm = false;
+                            });
+                          },
+                          child: Text('Term',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: isTerm
+                                      ? const Color(0xffff5344)
+                                      : Colors.black)),
                         ),
                       ),
                     ],
@@ -97,11 +141,13 @@ class _FooterMainState extends State<FooterMain> {
                 ],
               ),
               Column(
-                children:const [Text('@ Copyright 2021 Foodies. | All Rights Reserved.',
-                          style:
-                              TextStyle(color: Color(0xff161616), fontSize: 20),)],
+                children: const [
+                  Text(
+                    '@ Copyright 2021 Foodies. | All Rights Reserved.',
+                    style: TextStyle(color: Color(0xff161616), fontSize: 20),
+                  )
+                ],
               )
-           
             ],
           )
         ],

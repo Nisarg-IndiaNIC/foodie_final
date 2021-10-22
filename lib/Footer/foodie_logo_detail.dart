@@ -9,6 +9,10 @@ class FooterDescription extends StatefulWidget {
 
 class _FooterDescriptionState extends State<FooterDescription> {
   String select = 'first';
+  bool isHover = false;
+  bool isFeed = false;
+  bool isCont = false;
+  bool isacc = false;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,25 +38,36 @@ class _FooterDescriptionState extends State<FooterDescription> {
         const SizedBox(
           height: 30,
         ),
-       const Text(
-            'Lorem Ipsum has been the industry\nstandard dummy text ever since the\n1500s, when an unknown printer.',
-            style: TextStyle(
-              fontSize:25,
-            height: 1.8), ),
+        const Text(
+          'Lorem Ipsum has been the industry\nstandard dummy text ever since the\n1500s, when an unknown printer.',
+          style: TextStyle(fontSize: 25, height: 1.8),
+        ),
         const SizedBox(
           height: 30,
         ),
         Row(
           children: [
             InkWell(
-              onTap: () {
-                setState(() {
-                  select = 'first';
-                });
-              },
-              child: Image.asset('assets/instagram.png', color: select == 'first'
-                          ? const Color(0xffFF5344)
-                          : const Color(0xffcccccc),height: 30,),
+              onTap: () {},
+              child: MouseRegion(
+                onEnter: (f) {
+                  setState(() {
+                    select = 'first';
+                  });
+                },
+                onExit: (f) {
+                  setState(() {
+                    select = 'first';
+                  });
+                },
+                child: Image.asset(
+                  'assets/instagram.png',
+                  color: select == 'first'
+                      ? const Color(0xffFF5344)
+                      : Colors.black,
+                  height: 30,
+                ),
+              ),
 
               // child: Container(
               //   alignment: Alignment.center,
@@ -79,14 +94,25 @@ class _FooterDescriptionState extends State<FooterDescription> {
               width: 40,
             ),
             InkWell(
-              onTap: () {
-                setState(() {
-                  select = 'sec';
-                });
-              },
-              child: Image.asset('assets/snapchat.png', color: select == 'sec'
-                          ? const Color(0xffFF5344)
-                          : const Color(0xffcccccc),height: 30,),
+              onTap: () {},
+              child: MouseRegion(
+                onEnter: (f) {
+                  setState(() {
+                    select = 'sec';
+                  });
+                },
+                onExit: (f) {
+                  setState(() {
+                    select = 'sec';
+                  });
+                },
+                child: Image.asset(
+                  'assets/snapchat.png',
+                  color:
+                      select == 'sec' ? const Color(0xffFF5344) : Colors.black,
+                  height: 30,
+                ),
+              ),
 
               // child: Container(
               //   alignment: Alignment.center,
@@ -118,9 +144,25 @@ class _FooterDescriptionState extends State<FooterDescription> {
                   select = 'third';
                 });
               },
-            child: Image.asset('assets/google-plus.png', color: select == 'third'
-                          ? const Color(0xffFF5344)
-                          : const Color(0xffcccccc),height: 30,),
+              child: MouseRegion(
+                onEnter: (f) {
+                  setState(() {
+                    select = 'third';
+                  });
+                },
+                onExit: (f) {
+                  setState(() {
+                    select = 'third';
+                  });
+                },
+                child: Image.asset(
+                  'assets/google-plus.png',
+                  color: select == 'third'
+                      ? const Color(0xffFF5344)
+                      : Colors.black,
+                  height: 30,
+                ),
+              ),
 
               // child: Container(
               //   alignment: Alignment.center,
@@ -152,9 +194,25 @@ class _FooterDescriptionState extends State<FooterDescription> {
                   select = 'fourth';
                 });
               },
-              child: Image.asset('assets/twitter.png', color: select == 'fourth'
-                          ? const Color(0xffFF5344)
-                          : const Color(0xffcccccc),height: 30,),
+              child: MouseRegion(
+                onEnter: (f) {
+                  setState(() {
+                    select = 'fourth';
+                  });
+                },
+                onExit: (f) {
+                  setState(() {
+                    select = 'fourth';
+                  });
+                },
+                child: Image.asset(
+                  'assets/twitter.png',
+                  color: select == 'fourth'
+                      ? const Color(0xffFF5344)
+                      : Colors.black,
+                  height: 30,
+                ),
+              ),
 
               // child: Container(
               //   alignment: Alignment.center,
