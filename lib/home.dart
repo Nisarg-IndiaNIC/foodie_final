@@ -6,6 +6,7 @@ import 'package:foodie_final/Items/scroll_item.dart';
 import 'package:foodie_final/OurChef/chef_main.dart';
 import 'package:foodie_final/WhatTheySay/say_main.dart';
 import 'package:foodie_final/WhatWeServe/what_serve_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -19,27 +20,38 @@ class _MainPageState extends State<MainPage> {
   final homeKey = GlobalKey();
   final menuKey = GlobalKey();
   final contactKey = GlobalKey();
+
+
+    bool? home = false;
+    bool? service = false;
+    bool? menu = false;
+    bool? contact = false;
+
+
   String homehead = 'first';
 
   Future scrollToservice() async {
     final context = serviceKey.currentContext!;
-    await Scrollable.ensureVisible(context);
+    await Scrollable.ensureVisible(context, duration: Duration(seconds: 2));
   }
 
   Future scrollTohome() async {
     final context = homeKey.currentContext!;
-    await Scrollable.ensureVisible(context);
+    await Scrollable.ensureVisible(context, duration: Duration(seconds: 2));
   }
 
   Future scrollTomenu() async {
     final context = menuKey.currentContext!;
-    await Scrollable.ensureVisible(context);
+    await Scrollable.ensureVisible(context, duration: Duration(seconds: 2));
   }
 
   Future scrollTocontact() async {
     final context = contactKey.currentContext!;
-    await Scrollable.ensureVisible(context);
+    await Scrollable.ensureVisible(context, duration: Duration(seconds: 2));
   }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -67,10 +79,11 @@ class _MainPageState extends State<MainPage> {
                           ),
                           Text(
                             'Foodie',
-                            style: TextStyle(
-                              fontSize:
-                                  MediaQuery.of(context).size.height * 0.06,
-                            ),
+                            style: GoogleFonts.baloo(fontSize:60 )
+                              
+                       
+                                  
+                            
                           )
                         ],
                       ),
@@ -80,64 +93,92 @@ class _MainPageState extends State<MainPage> {
                     children: [
                       Row(
                         children: [
-                          InkWell(
-                            onTap: () {
-                              scrollTohome();
-                              setState(() {
-                                homehead = 'first';
-                              });
-                            },
-                            child: Text('Home',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: homehead == 'first'
-                                        ? const Color(0xffff5344)
-                                        : Colors.black)),
+                          MouseRegion(
+                            onHover: (f){
+                             setState(() {
+                               homehead = 'first';
+                             });
+                           },
+                            child: GestureDetector(
+                              onTap: () {
+                                scrollTohome();
+                                setState(() {
+                                  homehead = 'first';
+                                });
+                              },
+                              child: Text('Home',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: homehead == 'first'
+                                          ? Theme.of(context).primaryColor
+                                          : Colors.black)),
+                            ),
                           ),
                           const SizedBox(width: 72),
-                          InkWell(
-                            onTap: () {
-                              scrollToservice();
-                              setState(() {
-                                homehead = 'sec';
-                              });
-                            },
-                            child: Text('Services',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: homehead == 'sec'
-                                        ? const Color(0xffff5344)
-                                        : Colors.black)),
+                          MouseRegion(
+                           onHover: (f){
+                             setState(() {
+                               homehead = 'sec';
+                             });
+                           },
+                            child: GestureDetector(
+                              onTap: () {
+                                scrollToservice();
+                                setState(() {
+                                  homehead = 'sec';
+                                });
+                              },
+                              child: Text('Services',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: homehead == 'sec'
+                                          ? Theme.of(context).primaryColor
+                                          : Colors.black)),
+                            ),
                           ),
                           const SizedBox(width: 72),
-                          InkWell(
-                            onTap: () {
-                              scrollTomenu();
-                              setState(() {
-                                homehead = 'third';
-                              });
-                            },
-                            child: Text('Menu',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: homehead == 'third'
-                                        ? const Color(0xffff5344)
-                                        : Colors.black)),
+                          MouseRegion(
+                            onHover: (f){
+                             setState(() {
+                               homehead = 'third';
+                             });
+                           },
+                            child: GestureDetector(
+                              onTap: () {
+                                scrollTomenu();
+                                setState(() {
+                                  homehead = 'third';
+                                });
+                              },
+                              child: Text('Menu',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: homehead == 'third'
+                                          ? Theme.of(context).primaryColor
+                                          : Colors.black)),
+                            ),
                           ),
                           const SizedBox(width: 72),
-                          InkWell(
-                            onTap: () {
-                              scrollTocontact();
-                              setState(() {
-                                homehead = 'fourth';
-                              });
-                            },
-                            child: Text('Contact',
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: homehead == 'fourth'
-                                        ? const Color(0xffff5344)
-                                        : Colors.black)),
+                          MouseRegion(
+                             onHover: (f){
+                             setState(() {
+                               homehead = 'fourth';
+                             });
+                           },
+                            child: GestureDetector(
+                              onTap: () {
+                                scrollTocontact();
+                                setState(() {
+                                  homehead = 'fourth';
+                                });
+                              },
+                              child: Text('Contact',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: homehead == 'fourth'
+                                          ? Theme.of(context).primaryColor
+                                          : Colors.black)),
+                            ),
                           ),
                         ],
                       )
@@ -157,20 +198,20 @@ class _MainPageState extends State<MainPage> {
                             size: 30,
                           ),
                           const SizedBox(width: 40),
-                          InkWell(
+                          GestureDetector(
                             onTap: () {},
                             child: Container(
                               padding: const EdgeInsets.only(
                                   left: 55, right: 55, top: 20, bottom: 20),
                               decoration: BoxDecoration(
-                                color: const Color(0xffff5344),
+                                color:Theme.of(context).primaryColor,
                                 borderRadius: BorderRadius.circular(36),
-                                boxShadow: const [
+                                boxShadow: [
                                   BoxShadow(
-                                    color: Color(0xffff5344),
+                                    color: Theme.of(context).primaryColor,
                                     blurRadius: 5,
                                     spreadRadius: 1.0,
-                                    offset: Offset(0.0, 2.0),
+                                    offset:const Offset(0.0, 2.0),
                                   )
                                 ],
                               ),
@@ -211,6 +252,25 @@ class _MainPageState extends State<MainPage> {
             ),
             Container(key: contactKey, child: const FooterMain())
           ],
+        ),
+      ),
+     
+     
+     
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          scrollTohome();
+          setState(() {
+            homehead = 'first';
+          });
+        },
+        backgroundColor: Colors.red.shade300,
+        hoverElevation: 3,
+        hoverColor: Theme.of(context).primaryColor,
+        child:const Icon(
+          Icons.arrow_upward_rounded,
+          color: Colors.white,
+          size: 30,
         ),
       ),
     );

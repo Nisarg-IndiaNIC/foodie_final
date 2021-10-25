@@ -39,7 +39,7 @@ class _FooterSupportState extends State<FooterSupport> {
             },
             child: Text('Account',
                 style: TextStyle(
-                  fontSize: 30,color: isHover ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isHover ?Theme.of(context).primaryColor : Colors.black
                 )),
           ),
         ),
@@ -61,7 +61,7 @@ class _FooterSupportState extends State<FooterSupport> {
             },
             child: Text('Feedback',
                 style: TextStyle(
-                  fontSize: 30,color: isFeed ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isFeed ?Theme.of(context).primaryColor : Colors.black
                 )),
           ),
         ),
@@ -83,7 +83,7 @@ class _FooterSupportState extends State<FooterSupport> {
             },
             child: Text('Contact Us',
                 style: TextStyle(
-                  fontSize: 30,color: isCont ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isCont ?Theme.of(context).primaryColor : Colors.black
                 )),
           ),
         ),
@@ -105,7 +105,7 @@ class _FooterSupportState extends State<FooterSupport> {
             },
             child: Text('Accesbility',
                 style: TextStyle(
-                  fontSize: 30,color: isacc ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isacc ?Theme.of(context).primaryColor: Colors.black
                 )),
           ),
         ),

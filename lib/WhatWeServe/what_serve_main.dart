@@ -13,9 +13,9 @@ class _WhatWeServeState extends State<WhatWeServe> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-       const  Text(
+       Text(
           'What We Serve',
-          style: TextStyle(fontSize: 24, color: Color(0xffff5344)),
+          style: TextStyle(fontSize: 24, color:Theme.of(context).primaryColor),
         ),
         const SizedBox(
           height: 15,

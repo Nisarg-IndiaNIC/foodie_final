@@ -39,7 +39,7 @@ class _FooterCompanyState extends State<FooterCompany> {
             },
             child: Text('Home',
                 style: TextStyle(
-                  fontSize: 30,color: isHome ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isHome ?Theme.of(context).primaryColor: Colors.black
                 )),
           ),
         ),
@@ -61,7 +61,7 @@ class _FooterCompanyState extends State<FooterCompany> {
             },
             child: Text('Feedback',
                 style: TextStyle(
-                  fontSize: 30,color: isAbout ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isAbout ?Theme.of(context).primaryColor: Colors.black
                 )),
           ),
         ),
@@ -83,7 +83,7 @@ class _FooterCompanyState extends State<FooterCompany> {
             },
             child: Text('Blog',
                 style: TextStyle(
-                  fontSize: 30,color: isBlog ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isBlog ?Theme.of(context).primaryColor: Colors.black
                 )),
           ),
         ),
@@ -105,7 +105,7 @@ class _FooterCompanyState extends State<FooterCompany> {
             },
             child: Text('Contact',
                 style: TextStyle(
-                  fontSize: 30,color: isContact ?const Color(0xffff5344) : Colors.black
+                  fontSize: 30,color: isContact ?Theme.of(context).primaryColor: Colors.black
                 )),
           ),
         ),

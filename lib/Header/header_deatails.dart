@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodie_final/Header/our_foodies.dart';
 
 class HeaderDetails extends StatefulWidget {
   const HeaderDetails({Key? key}) : super(key: key);
@@ -10,7 +11,8 @@ class HeaderDetails extends StatefulWidget {
 class _HeaderDetailsState extends State<HeaderDetails> {
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,25 +23,28 @@ class _HeaderDetailsState extends State<HeaderDetails> {
                   borderRadius: BorderRadius.circular(11),
                   color: Colors.red.shade100,
                 ),
-                child: const Text(
+                child: Text(
                   'Super Fast Delivery',
-                  style: TextStyle(color: Color(0xffff5344)),
+                  style: TextStyle(color: Theme.of(context).primaryColor),
                 )),
             const SizedBox(
               height: 45,
             ),
             RichText(
-              text: const TextSpan(
-                style: TextStyle(color: Colors.black, fontSize: 85, fontWeight: FontWeight.w600),
+              text: TextSpan(
+                style:const TextStyle(
+                    color: Colors.black,
+                    fontSize: 85,
+                    fontWeight: FontWeight.w600),
                 children: [
-                  TextSpan(text: 'Deliver '),
+                 const TextSpan(text: 'Deliver '),
                   TextSpan(
                       text: 'your\n',
-                      style: TextStyle(color: Color(0xffff5344))),
-                  TextSpan(text: 'Food within\n'),
+                      style: TextStyle(color: Theme.of(context).primaryColor)),
+                 const TextSpan(text: 'Food within\n'),
                   TextSpan(
-                      text: '80 ', style: TextStyle(color: Color(0xffff5344))),
-                  TextSpan(text: 'min'),
+                      text: '80 ', style: TextStyle(color: Theme.of(context).primaryColor)),
+                 const TextSpan(text: 'min'),
                 ],
               ),
             ),
@@ -51,20 +56,20 @@ class _HeaderDetailsState extends State<HeaderDetails> {
             ),
             Row(
               children: [
-                InkWell(
-                  onTap: (){},
+                GestureDetector(
+                  onTap: () {},
                   child: Container(
                     padding: const EdgeInsets.only(
                         left: 55, right: 55, top: 20, bottom: 20),
                     decoration: BoxDecoration(
-                      color: const Color(0xffff5344),
+                      color: Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.circular(36),
-                      boxShadow: const [
+                      boxShadow:[
                         BoxShadow(
-                          color: Color(0xffff5344),
+                          color: Theme.of(context).primaryColor,
                           blurRadius: 5,
                           spreadRadius: 1.0,
-                          offset: Offset(0.0, 2.0),
+                          offset:const Offset(0.0, 2.0),
                         )
                       ],
                     ),
@@ -74,12 +79,14 @@ class _HeaderDetailsState extends State<HeaderDetails> {
                     ),
                   ),
                 ),
-              const  SizedBox(width: 50,),
+                const SizedBox(
+                  width: 50,
+                ),
                 Image.asset('assets/video.png'),
-             const   SizedBox(width: 10,),
-                const Text(
-                'Watch Video',
-                style: TextStyle(fontSize: 30)),
+                const SizedBox(
+                  width: 10,
+                ),
+                const Text('Watch Video', style: TextStyle(fontSize: 30)),
               ],
             ),
           ],
@@ -91,7 +98,7 @@ class _HeaderDetailsState extends State<HeaderDetails> {
 }
 
 class PiC extends StatefulWidget {
-  const PiC({ Key? key }) : super(key: key);
+  const PiC({Key? key}) : super(key: key);
 
   @override
   _PiCState createState() => _PiCState();
@@ -105,25 +112,48 @@ class _PiCState extends State<PiC> {
         clipBehavior: Clip.none,
         children: [
           Image.asset('assets/girl.png'),
+         const Positioned(
+              top: 750, left: 420, child: OurFoodies()),
           Positioned(
-            top: 750,
-            left: 420,
-            child: Image.asset('assets/allnchef.png')),
-            Positioned(
-            top: 380,
-            right:650,
-            child: Image.asset('assets/delcom.png')),
-            Positioned(
-           
-            left:650,
-            child: Image.asset('assets/friees.png')),
-            Positioned(
-            
-            right:650,
-            child: Image.asset('assets/juice.png')),
+              top: 380,
+              right: 650,
+              child: Container(
+                height: 97,
+                width: 319,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(49),
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.black38,
+                          blurRadius: 10,
+                          spreadRadius: 1.0,
+                          offset: Offset(0, 5))
+                    ]),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                        height: 55,
+                        width: 55,
+                        decoration: BoxDecoration(
+                            color:Theme.of(context).primaryColor,
+                            borderRadius: BorderRadius.circular(55)),
+                        child:const Icon(
+                          Icons.check,
+                          size: 24,
+                          color: Colors.white,
+                        ),
+                        alignment: Alignment.center),
+                       const Text('Delivery Complete', style: TextStyle(fontSize: 20),)
+                  ],
+                ),
+              )),
+          Positioned(left: 650, child: Image.asset('assets/friees.png')),
+          Positioned(right: 650, child: Image.asset('assets/juice.png')),
         ],
       ),
     );
   }
 }
-

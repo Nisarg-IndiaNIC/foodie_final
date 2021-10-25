@@ -36,7 +36,7 @@ class _ScrollItemsState extends State<ScrollItems> {
           width: 500,
           child: RawScrollbar(
             controller: scoll,
-            thumbColor: const Color(0xffff5344),
+            thumbColor: Theme.of(context).primaryColor,
             radius: const Radius.circular(20),
             thickness: 10,
             interactive: true,
@@ -57,7 +57,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                       margin: const EdgeInsets.only(right: 130),
                       decoration: BoxDecoration(
                           color: select == 'first'
-                              ? Colors.red
+                              ? Theme.of(context).primaryColor
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
@@ -105,7 +105,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                       width: 383,
                       decoration: BoxDecoration(
                           color:
-                              select == 'sec' ? Colors.red : Colors.transparent,
+                              select == 'sec' ? Theme.of(context).primaryColor: Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
                         children: [
@@ -151,7 +151,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                       width: 383,
                       decoration: BoxDecoration(
                           color: select == 'third'
-                              ? Colors.red
+                              ? Theme.of(context).primaryColor
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
@@ -198,7 +198,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                       width: 383,
                       decoration: BoxDecoration(
                           color: select == 'fourth'
-                              ? Colors.red
+                              ? Theme.of(context).primaryColor
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
@@ -245,7 +245,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                       width: 383,
                       decoration: BoxDecoration(
                           color: select == 'five'
-                              ? Colors.red
+                              ? Theme.of(context).primaryColor
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(61)),
                       child: Row(
@@ -320,7 +320,7 @@ class _LoginScrollState extends State<LoginScroll> {
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                     color: currentPage == 0
-                        ? const Color(0xffff5344)
+                        ? Theme.of(context).primaryColor
                         : Colors.grey,
                     borderRadius: const BorderRadius.all(Radius.circular(12))),
               ),
@@ -331,7 +331,7 @@ class _LoginScrollState extends State<LoginScroll> {
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                     color: currentPage == 1
-                        ? const Color(0xffff5344)
+                        ? Theme.of(context).primaryColor
                         : Colors.grey,
                     borderRadius: const BorderRadius.all(Radius.circular(12))),
               ),
@@ -342,7 +342,7 @@ class _LoginScrollState extends State<LoginScroll> {
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                     color: currentPage == 2
-                        ? const Color(0xffff5344)
+                        ? Theme.of(context).primaryColor
                         : Colors.grey,
                     borderRadius: const BorderRadius.all(Radius.circular(12))),
               ),
@@ -397,9 +397,9 @@ class _SliderspageState extends State<Sliderspage> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(11),
                   color: Colors.red.shade100),
-              child: const Text(
+              child: Text(
                 'Fastest Food Delivery Service',
-                style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+                style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 24),
               ),
             ),
             const SizedBox(
@@ -423,17 +423,18 @@ class _SliderspageState extends State<Sliderspage> {
             InkWell(
               onTap: () {},
               child: Container(
+                margin: const EdgeInsets.only(left: 10),
                 padding: const EdgeInsets.only(
                     left: 55, right: 55, top: 15, bottom: 20),
                 decoration: BoxDecoration(
-                  color: const Color(0xffff5344),
+                  color: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(36),
-                  boxShadow: const [
+                  boxShadow: [
                     BoxShadow(
-                      color: Color(0xffff5344),
+                      color: Theme.of(context).primaryColor,
                       blurRadius: 5,
                       spreadRadius: 1.0,
-                      offset: Offset(0.0, 2.0),
+                      offset:const Offset(0.0, 2.0),
                     )
                   ],
                 ),
@@ -479,9 +480,9 @@ class _Sliderpage2State extends State<Sliderpage2> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(11),
                   color: Colors.red.shade100),
-              child: const Text(
+              child:Text(
                 'Enjoy the Delicious Food',
-                style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+                style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 24),
               ),
             ),
             const SizedBox(
@@ -538,9 +539,9 @@ class _Sliderpage3State extends State<Sliderpage3> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(11),
                   color: Colors.red.shade100),
-              child: const Text(
+              child: Text(
                 'Join Us',
-                style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+                style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 24),
               ),
             ),
             const SizedBox(
@@ -564,17 +565,18 @@ class _Sliderpage3State extends State<Sliderpage3> {
             InkWell(
               onTap: () {},
               child: Container(
+                margin: const EdgeInsets.only(left: 10),
                 padding: const EdgeInsets.only(
                     left: 55, right: 55, top: 15, bottom: 20),
                 decoration: BoxDecoration(
-                  color: const Color(0xffff5344),
+                  color: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(36),
-                  boxShadow: const [
+                  boxShadow:  [
                     BoxShadow(
-                      color: Color(0xffff5344),
+                      color: Theme.of(context).primaryColor,
                       blurRadius: 5,
                       spreadRadius: 1.0,
-                      offset: Offset(0.0, 2.0),
+                      offset:const Offset(0.0, 2.0),
                     )
                   ],
                 ),

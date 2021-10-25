@@ -18,9 +18,9 @@ class _SayMainState extends State<SayMain> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'What They Say',
-            style: TextStyle(color: Color(0xffFF5344), fontSize: 24),
+            style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 24),
           ),
           const SizedBox(
             height: 15,
@@ -48,7 +48,7 @@ class _SayMainState extends State<SayMain> {
                     Icons.arrow_back_rounded,
                     size: 46,
                     color: (selectedWidgetMarker == CustomerSay.left)
-                        ? const Color(0xffff5344)
+                        ? Theme.of(context).primaryColor
                         : const Color(0xff9a9a9a),
                   )),
               const SizedBox(
@@ -64,7 +64,7 @@ class _SayMainState extends State<SayMain> {
                     Icons.arrow_forward_rounded,
                     size: 46,
                     color: (selectedWidgetMarker == CustomerSay.right)
-                        ? const Color(0xffff5344)
+                        ? Theme.of(context).primaryColor
                         : const Color(0xff9a9a9a),
                   )),
             ],

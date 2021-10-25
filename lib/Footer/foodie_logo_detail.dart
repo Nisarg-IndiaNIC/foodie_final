@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FooterDescription extends StatefulWidget {
   const FooterDescription({Key? key}) : super(key: key);
@@ -28,9 +29,7 @@ class _FooterDescriptionState extends State<FooterDescription> {
             ),
             Text(
               'Foodie',
-              style: TextStyle(
-                fontSize: MediaQuery.of(context).size.height * 0.06,
-              ),
+              style: GoogleFonts.baloo(fontSize: MediaQuery.of(context).size.height * 0.06)
             )
           ],
         ),
@@ -61,7 +60,7 @@ class _FooterDescriptionState extends State<FooterDescription> {
                 },
                 child: Image.asset(
                   'assets/instagram.png',
-                  color: isHover == true ? Color(0xffFF5344) : Colors.black,
+                  color: isHover == true ? Theme.of(context).primaryColor : Colors.black,
                   height: 30,
                 ),
               ),
@@ -85,7 +84,7 @@ class _FooterDescriptionState extends State<FooterDescription> {
                 child: Image.asset(
                   'assets/snapchat.png',
                   color:
-                      isFeed == true ? const Color(0xffFF5344) : Colors.black,
+                      isFeed == true ? Theme.of(context).primaryColor : Colors.black,
                   height: 30,
                 ),
               ),
@@ -109,7 +108,7 @@ class _FooterDescriptionState extends State<FooterDescription> {
                 child: Image.asset(
                   'assets/google-plus.png',
                   color:
-                      isCont == true ? const Color(0xffFF5344) : Colors.black,
+                      isCont == true ? Theme.of(context).primaryColor : Colors.black,
                   height: 30,
                 ),
               ),
@@ -132,7 +131,7 @@ class _FooterDescriptionState extends State<FooterDescription> {
                 },
                 child: Image.asset(
                   'assets/twitter.png',
-                  color: isacc == true ? const Color(0xffFF5344) : Colors.black,
+                  color: isacc == true ? Theme.of(context).primaryColor : Colors.black,
                   height: 30,
                 ),
               ),

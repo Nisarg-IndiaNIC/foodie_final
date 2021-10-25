@@ -84,7 +84,7 @@ class _FooterMainState extends State<FooterMain> {
                               style: TextStyle(
                                   fontSize: 20,
                                   color: isHelp
-                                      ? const Color(0xffff5344)
+                                      ? Theme.of(context).primaryColor
                                       : Colors.black)),
                         ),
                       ),
@@ -108,7 +108,7 @@ class _FooterMainState extends State<FooterMain> {
                               style: TextStyle(
                                   fontSize: 20,
                                   color: isPrivacy
-                                      ? const Color(0xffff5344)
+                                      ? Theme.of(context).primaryColor
                                       : Colors.black)),
                         ),
                       ),
@@ -132,7 +132,7 @@ class _FooterMainState extends State<FooterMain> {
                               style: TextStyle(
                                   fontSize: 20,
                                   color: isTerm
-                                      ? const Color(0xffff5344)
+                                      ? Theme.of(context).primaryColor
                                       : Colors.black)),
                         ),
                       ),

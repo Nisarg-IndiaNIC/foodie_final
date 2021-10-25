@@ -17,12 +17,12 @@ class _HeaderMainState extends State<HeaderMain> {
         opacity: 0.27,
         child: Container(
          
-          decoration: const BoxDecoration(
+          decoration:BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xffff5344),
+                Theme.of(context).primaryColor,
                 Colors.white,
               ],
             ),

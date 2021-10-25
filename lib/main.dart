@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
       
       title: 'Flutter Demo',
       theme: ThemeData(
+        primaryColor:const Color(0xffff5344),
+        // primaryColor: Colors.amber,
        textTheme: GoogleFonts.poppinsTextTheme(
       Theme.of(context).textTheme,
        ),
