@@ -352,182 +352,186 @@ class _LoginScrollState extends State<LoginScroll> {
             height: 30,
           ),
 
-          // CarouselSlider(
-          //     items: [
-          //       Container(
-          //         child: Row(
-          //           children: [
-          //             Column(
-          //               mainAxisAlignment: MainAxisAlignment.start,
-          //               crossAxisAlignment: CrossAxisAlignment.start,
-          //               children: [
-          //                 Container(
-          //                   padding: const EdgeInsets.all(10),
-          //                   decoration: BoxDecoration(
-          //                       borderRadius: BorderRadius.circular(11),
-          //                       color: Colors.red.shade100),
-          //                   child: const Text(
-          //                     'Fastest Food Delivery Service',
-          //                     style: TextStyle(
-          //                         color: Color(0xffff5344), fontSize: 24),
-          //                   ),
-          //                 ),
-          //                 const SizedBox(
-          //                   height: 15,
-          //                 ),
-          //                 const Text(
-          //                   'Delivery in just\n30 minutes',
-          //                   style: TextStyle(
-          //                       fontSize: 60, fontWeight: FontWeight.w600),
-          //                 ),
-          //                 const SizedBox(
-          //                   height: 24,
-          //                 ),
-          //                 const Text(
-          //                   'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
-          //                   style: TextStyle(fontSize: 25, height: 1.5),
-          //                 ),
-          //                 const SizedBox(
-          //                   height: 30,
-          //                 ),
-          //                 InkWell(
-          //                   onTap: () {},
-          //                   child: Container(
-          //                     padding: const EdgeInsets.only(
-          //                         left: 55, right: 55, top: 20, bottom: 20),
-          //                     decoration: BoxDecoration(
-          //                       color: const Color(0xffff5344),
-          //                       borderRadius: BorderRadius.circular(36),
-          //                       boxShadow: const [
-          //                         BoxShadow(
-          //                           color: Color(0xffff5344),
-          //                           blurRadius: 5,
-          //                           spreadRadius: 1.0,
-          //                           offset: Offset(0.0, 2.0),
-          //                         )
-          //                       ],
-          //                     ),
-          //                     child: const Text(
-          //                       'Login',
-          //                       style: TextStyle(
-          //                           color: Colors.white, fontSize: 24),
-          //                     ),
-          //                   ),
-          //                 )
-          //               ],
-          //             ),
-          //             Column(
-          //               children: [
-          //                 Image.asset(
-          //                   'assets/bur.png',
-          //                   height: 480,
-          //                 )
-          //               ],
-          //             ),
-          //           ],
+          CarouselSlider(
+              items: [
+                Sliderspage(),
+                Sliderspage(),
+                Sliderspage()
+               
+              ],
+              options: CarouselOptions(
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    currentPage = index;
+                  });
+                },
+              
+                viewportFraction: 1,
+                initialPage: 0,
+                enableInfiniteScroll: true,
+                reverse: false,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enlargeCenterPage: true,
+                scrollDirection: Axis.horizontal,
+              )),
+          // Row(
+          //   children: [
+          //     Column(
+          //       mainAxisAlignment: MainAxisAlignment.start,
+          //       crossAxisAlignment: CrossAxisAlignment.start,
+          //       children: [
+          //         Container(
+          //           padding: const EdgeInsets.all(10),
+          //           decoration: BoxDecoration(
+          //               borderRadius: BorderRadius.circular(11),
+          //               color: Colors.red.shade100),
+          //           child: const Text(
+          //             'Fastest Food Delivery Service',
+          //             style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+          //           ),
           //         ),
-          //       ),
-          //       Container(
-          //         height: 300,
-          //         width: 300,
-          //         color: Colors.green,
-          //         child: Text('Dataaa'),
-          //       ),
-          //       Container(
-          //         height: 300,
-          //         width: 300,
-          //         color: Colors.blue,
-          //         child: Text('Dataaaa'),
-          //       ),
-          //     ],
-          //     options: CarouselOptions(
-          //       onPageChanged: (index, reason) {
-          //         setState(() {
-          //           currentPage = index;
-          //         });
-          //       },
-          //       aspectRatio: 16 / 9,
-          //       viewportFraction: 0.8,
-          //       initialPage: 0,
-          //       enableInfiniteScroll: true,
-          //       reverse: false,
-          //       autoPlay: true,
-          //       autoPlayInterval: Duration(seconds: 3),
-          //       autoPlayAnimationDuration: Duration(milliseconds: 800),
-          //       autoPlayCurve: Curves.fastOutSlowIn,
-          //       enlargeCenterPage: true,
-          //       scrollDirection: Axis.horizontal,
-          //     )),
-          Row(
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(11),
-                        color: Colors.red.shade100),
-                    child: const Text(
-                      'Fastest Food Delivery Service',
-                      style: TextStyle(color: Color(0xffff5344), fontSize: 24),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  const Text(
-                    'Delivery in just\n30 minutes',
-                    style: TextStyle(fontSize: 60, fontWeight: FontWeight.w600),
-                  ),
-                  const SizedBox(
-                    height: 24,
-                  ),
-                  const Text(
-                    'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
-                    style: TextStyle(fontSize: 25, height: 1.5),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      padding: const EdgeInsets.only(
-                          left: 55, right: 55, top: 20, bottom: 20),
-                      decoration: BoxDecoration(
-                        color: const Color(0xffff5344),
-                        borderRadius: BorderRadius.circular(36),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0xffff5344),
-                            blurRadius: 5,
-                            spreadRadius: 1.0,
-                            offset: Offset(0.0, 2.0),
-                          )
-                        ],
-                      ),
-                      child: const Text(
-                        'Login',
-                        style: TextStyle(color: Colors.white, fontSize: 24),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Image.asset(
-                    'assets/bur.png',
-                    height: 480,
-                  )
-                ],
-              ),
-            ],
-          )
+          //         const SizedBox(
+          //           height: 15,
+          //         ),
+          //         const Text(
+          //           'Delivery in just\n30 minutes',
+          //           style: TextStyle(fontSize: 60, fontWeight: FontWeight.w600),
+          //         ),
+          //         const SizedBox(
+          //           height: 24,
+          //         ),
+          //         const Text(
+          //           'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
+          //           style: TextStyle(fontSize: 25, height: 1.5),
+          //         ),
+          //         const SizedBox(
+          //           height: 30,
+          //         ),
+          //         InkWell(
+          //           onTap: () {},
+          //           child: Container(
+          //             padding: const EdgeInsets.only(
+          //                 left: 55, right: 55, top: 20, bottom: 20),
+          //             decoration: BoxDecoration(
+          //               color: const Color(0xffff5344),
+          //               borderRadius: BorderRadius.circular(36),
+          //               boxShadow: const [
+          //                 BoxShadow(
+          //                   color: Color(0xffff5344),
+          //                   blurRadius: 5,
+          //                   spreadRadius: 1.0,
+          //                   offset: Offset(0.0, 2.0),
+          //                 )
+          //               ],
+          //             ),
+          //             child: const Text(
+          //               'Login',
+          //               style: TextStyle(color: Colors.white, fontSize: 24),
+          //             ),
+          //           ),
+          //         )
+          //       ],
+          //     ),
+          //     Column(
+          //       children: [
+          //         Image.asset(
+          //           'assets/bur.png',
+          //           height: 480,
+          //         )
+          //       ],
+          //     ),
+          //   ],
+          // )
         ],
       ),
     );
+  }
+}
+
+
+class Sliderspage extends StatefulWidget {
+  const Sliderspage({ Key? key }) : super(key: key);
+
+  @override
+  _SliderspageState createState() => _SliderspageState();
+}
+
+class _SliderspageState extends State<Sliderspage> {
+  @override
+  Widget build(BuildContext context) {
+    return  Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(11),
+                                color: Colors.red.shade100),
+                            child: const Text(
+                              'Fastest Food Delivery Service',
+                              style: TextStyle(
+                                  color: Color(0xffff5344), fontSize: 24),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const Text(
+                            'Delivery in just\n30 minutes',
+                            style: TextStyle(
+                                fontSize: 60, fontWeight: FontWeight.w600, height: 1.2),
+                          ),
+                          const SizedBox(
+                            height: 24,
+                          ),
+                          const Text(
+                            'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
+                            style: TextStyle(fontSize: 25, height: 1.5),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              padding: const EdgeInsets.only(
+                                  left: 55, right: 55, top: 15, bottom: 20),
+                              decoration: BoxDecoration(
+                                color: const Color(0xffff5344),
+                                borderRadius: BorderRadius.circular(36),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0xffff5344),
+                                    blurRadius: 5,
+                                    spreadRadius: 1.0,
+                                    offset: Offset(0.0, 2.0),
+                                  )
+                                ],
+                              ),
+                              child: const Text(
+                                'Login',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 24),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Image.asset(
+                            'assets/bur.png',
+                            height: 480,
+                          )
+                        ],
+                      ),
+                    ],
+                  );
   }
 }

@@ -8,7 +8,6 @@ class FooterDescription extends StatefulWidget {
 }
 
 class _FooterDescriptionState extends State<FooterDescription> {
-  String select = 'first';
   bool isHover = false;
   bool isFeed = false;
   bool isCont = false;
@@ -52,43 +51,20 @@ class _FooterDescriptionState extends State<FooterDescription> {
               child: MouseRegion(
                 onEnter: (f) {
                   setState(() {
-                    select = 'first';
+                    isHover = true;
                   });
                 },
                 onExit: (f) {
                   setState(() {
-                    select = 'first';
+                    isHover = false;
                   });
                 },
                 child: Image.asset(
                   'assets/instagram.png',
-                  color: select == 'first'
-                      ? const Color(0xffFF5344)
-                      : Colors.black,
+                  color: isHover == true ? Color(0xffFF5344) : Colors.black,
                   height: 30,
                 ),
               ),
-
-              // child: Container(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //     '?',
-              //     style: TextStyle(
-              //         fontSize: 23,
-              //         color: select == 'first'
-              //             ? const Color(0xffFF5344)
-              //             : const Color(0xffcccccc)),
-              //   ),
-              //   decoration: BoxDecoration(
-              //       border: Border.all(
-              //           color: select == 'first'
-              //               ? const Color(0xffFF5344)
-              //               : const Color(0xffcccccc),
-              //           width: 3),
-              //       borderRadius: BorderRadius.circular(5)),
-              //   height: 30,
-              //   width: 30,
-              // ),
             ),
             const SizedBox(
               width: 40,
@@ -98,142 +74,68 @@ class _FooterDescriptionState extends State<FooterDescription> {
               child: MouseRegion(
                 onEnter: (f) {
                   setState(() {
-                    select = 'sec';
+                    isFeed = true;
                   });
                 },
                 onExit: (f) {
                   setState(() {
-                    select = 'sec';
+                    isFeed = false;
                   });
                 },
                 child: Image.asset(
                   'assets/snapchat.png',
                   color:
-                      select == 'sec' ? const Color(0xffFF5344) : Colors.black,
+                      isFeed == true ? const Color(0xffFF5344) : Colors.black,
                   height: 30,
                 ),
               ),
-
-              // child: Container(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //     '?',
-              //     style: TextStyle(
-              //         fontSize: 23,
-              //         color: select == 'sec'
-              //             ? const Color(0xffFF5344)
-              //             : const Color(0xffcccccc)),
-              //   ),
-              //   decoration: BoxDecoration(
-              //       border: Border.all(
-              //           color: select == 'sec'
-              //               ? const Color(0xffFF5344)
-              //               : const Color(0xffcccccc),
-              //           width: 3),
-              //       borderRadius: BorderRadius.circular(5)),
-              //   height: 30,
-              //   width: 30,
-              // ),
             ),
             const SizedBox(
               width: 40,
             ),
             InkWell(
-              onTap: () {
-                setState(() {
-                  select = 'third';
-                });
-              },
+              onTap: () {},
               child: MouseRegion(
                 onEnter: (f) {
                   setState(() {
-                    select = 'third';
+                    isCont = true;
                   });
                 },
                 onExit: (f) {
                   setState(() {
-                    select = 'third';
+                    isCont = false;
                   });
                 },
                 child: Image.asset(
                   'assets/google-plus.png',
-                  color: select == 'third'
-                      ? const Color(0xffFF5344)
-                      : Colors.black,
+                  color:
+                      isCont == true ? const Color(0xffFF5344) : Colors.black,
                   height: 30,
                 ),
               ),
-
-              // child: Container(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //     '?',
-              //     style: TextStyle(
-              //         fontSize: 23,
-              //         color: select == 'third'
-              //             ? const Color(0xffFF5344)
-              //             : const Color(0xffcccccc)),
-              //   ),
-              //   decoration: BoxDecoration(
-              //       border: Border.all(
-              //           color: select == 'third'
-              //               ? const Color(0xffFF5344)
-              //               : const Color(0xffcccccc),
-              //           width: 3),
-              //       borderRadius: BorderRadius.circular(5)),
-              //   height: 30,
-              //   width: 30,
-              // ),
             ),
             const SizedBox(
               width: 40,
             ),
             InkWell(
-              onTap: () {
-                setState(() {
-                  select = 'fourth';
-                });
-              },
+              onTap: () {},
               child: MouseRegion(
                 onEnter: (f) {
                   setState(() {
-                    select = 'fourth';
+                    isacc = true;
                   });
                 },
                 onExit: (f) {
                   setState(() {
-                    select = 'fourth';
+                    isacc = false;
                   });
                 },
                 child: Image.asset(
                   'assets/twitter.png',
-                  color: select == 'fourth'
-                      ? const Color(0xffFF5344)
-                      : Colors.black,
+                  color: isacc == true ? const Color(0xffFF5344) : Colors.black,
                   height: 30,
                 ),
               ),
-
-              // child: Container(
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //     '?',
-              //     style: TextStyle(
-              //         fontSize: 23,
-              //         color: select == 'fourth'
-              //             ? const Color(0xffFF5344)
-              //             : const Color(0xffcccccc)),
-              //   ),
-              //   decoration: BoxDecoration(
-              //       border: Border.all(
-              //           color: select == 'fourth'
-              //               ? const Color(0xffFF5344)
-              //               : const Color(0xffcccccc),
-              //           width: 3),
-              //       borderRadius: BorderRadius.circular(5)),
-              //   height: 30,
-              //   width: 30
-              // ),
             )
           ],
         )

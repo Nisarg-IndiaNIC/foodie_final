@@ -18,19 +18,19 @@ class _SayMainState extends State<SayMain> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-         const Text(
+          const Text(
             'What They Say',
             style: TextStyle(color: Color(0xffFF5344), fontSize: 24),
           ),
-         const SizedBox(
+          const SizedBox(
             height: 15,
           ),
-         const Text(
+          const Text(
             'What Our Customer\nSay About Us',
             style: TextStyle(fontSize: 60, fontWeight: FontWeight.w600),
             textAlign: TextAlign.center,
           ),
-         const SizedBox(
+          const SizedBox(
             height: 65,
           ),
           Image.asset('assets/sayimage.png'),
@@ -38,35 +38,36 @@ class _SayMainState extends State<SayMain> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                  onPressed: () {
+              GestureDetector(
+                  onTap: () {
                     setState(() {
                       selectedWidgetMarker = CustomerSay.left;
                     });
                   },
-                  icon: Icon(
-                    Icons.arrow_back,
+                  child: Icon(
+                    Icons.arrow_back_rounded,
                     size: 46,
                     color: (selectedWidgetMarker == CustomerSay.left)
                         ? const Color(0xffff5344)
                         : const Color(0xff9a9a9a),
                   )),
+          
               const SizedBox(
                 width: 35,
               ),
-              IconButton(
-                  onPressed: () {
+              GestureDetector(
+                  onTap: () {
                     setState(() {
                       selectedWidgetMarker = CustomerSay.right;
                     });
                   },
-                  icon: Icon(
-                    Icons.arrow_forward,
+                  child: Icon(
+                    Icons.arrow_forward_rounded,
                     size: 46,
                     color: (selectedWidgetMarker == CustomerSay.right)
                         ? const Color(0xffff5344)
                         : const Color(0xff9a9a9a),
-                  ))
+                  )),
             ],
           )
         ],
@@ -98,33 +99,45 @@ class RightSay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:const [
-      SizedBox(height: 46,),
-       Text(
+      children: const [
+        SizedBox(
+          height: 46,
+        ),
+        Text(
           'Emily Jasmine',
           style: TextStyle(fontSize: 48, fontWeight: FontWeight.w600),
         ),
         SizedBox(
           height: 7,
         ),
-      Text('Food Enthusiast',
+        Text('Food Enthusiast',
             style: TextStyle(fontSize: 24, color: Color(0xff323030))),
-            SizedBox(height: 10,),
-       SizedBox(
-          width: 160,
+        SizedBox(
+          height: 10,
+        ),
+        SizedBox(
+            width: 160,
             child: Divider(
-          color: Color(0xffff5344),
-        )),
-        SizedBox(height: 26,),
-        Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nwhen an unknown printer took a galley of type and scrambled it to make a type\nspecimen book. It has survived not only five centuries.',style: TextStyle(fontSize: 25, height: 2),textAlign: TextAlign.center,),
-        SizedBox(height: 46,)
+              color: Color(0xffff5344),
+            )),
+        SizedBox(
+          height: 26,
+        ),
+        Text(
+          'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nspecimen book. It has survived not only five centuries.',
+          style: TextStyle(fontSize: 25, height: 2),
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(
+          height: 46,
+        )
       ],
     );
   }
 }
 
 class LeftSay extends StatefulWidget {
-  const LeftSay({ Key? key }) : super(key: key);
+  const LeftSay({Key? key}) : super(key: key);
 
   @override
   _LeftSayState createState() => _LeftSayState();
@@ -134,26 +147,38 @@ class _LeftSayState extends State<LeftSay> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:const [
-      SizedBox(height: 46,),
-       Text(
+      children: const [
+        SizedBox(
+          height: 46,
+        ),
+        Text(
           'Nisarg Parikh',
           style: TextStyle(fontSize: 48, fontWeight: FontWeight.w600),
         ),
         SizedBox(
           height: 7,
         ),
-      Text('Food Blogger',
+        Text('Food Blogger',
             style: TextStyle(fontSize: 24, color: Color(0xff323030))),
-            SizedBox(height: 10,),
-       SizedBox(
-          width: 160,
+        SizedBox(
+          height: 10,
+        ),
+        SizedBox(
+            width: 160,
             child: Divider(
-          color: Color(0xffff5344),
-        )),
-        SizedBox(height: 26,),
-        Text('Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nwhen an unknown printer took a galley of type and scrambled it to make a type\nspecimen book. It has survived not only five centuries.',style: TextStyle(fontSize: 25, height: 2),textAlign: TextAlign.center,),
-        SizedBox(height: 46,)
+              color: Color(0xffff5344),
+            )),
+        SizedBox(
+          height: 26,
+        ),
+        Text(
+          'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nwhen an unknown printer took a galley of type and scrambled it to make a type\nspecimen book. It has survived not only five centuries.',
+          style: TextStyle(fontSize: 25, height: 2),
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(
+          height: 46,
+        )
       ],
     );
   }
