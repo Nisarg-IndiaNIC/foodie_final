@@ -51,7 +51,6 @@ class _SayMainState extends State<SayMain> {
                         ? const Color(0xffff5344)
                         : const Color(0xff9a9a9a),
                   )),
-          
               const SizedBox(
                 width: 35,
               ),
@@ -99,36 +98,40 @@ class RightSay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        SizedBox(
+      children: [
+      const  SizedBox(
           height: 46,
         ),
-        Text(
+      const  Text(
           'Emily Jasmine',
           style: TextStyle(fontSize: 48, fontWeight: FontWeight.w600),
         ),
-        SizedBox(
+      const  SizedBox(
           height: 7,
         ),
-        Text('Food Enthusiast',
+       const Text('Food Enthusiast',
             style: TextStyle(fontSize: 24, color: Color(0xff323030))),
-        SizedBox(
+      const  SizedBox(
           height: 10,
         ),
-        SizedBox(
+      const  SizedBox(
             width: 160,
             child: Divider(
               color: Color(0xffff5344),
             )),
-        SizedBox(
+       const SizedBox(
           height: 26,
         ),
-        Text(
-          'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nspecimen book. It has survived not only five centuries.',
-          style: TextStyle(fontSize: 25, height: 2),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(
+       Container(
+         height: 150,
+         child: const Text(
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nspecimen book. It has survived not only five centuries.',
+            maxLines: 3,
+            style: TextStyle(fontSize: 25, height: 2),
+            textAlign: TextAlign.center,
+          ),
+       ),
+       const SizedBox(
           height: 46,
         )
       ],
@@ -147,36 +150,40 @@ class _LeftSayState extends State<LeftSay> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        SizedBox(
+      children: [
+        const SizedBox(
           height: 46,
         ),
-        Text(
+        const Text(
           'Nisarg Parikh',
           style: TextStyle(fontSize: 48, fontWeight: FontWeight.w600),
         ),
-        SizedBox(
+        const SizedBox(
           height: 7,
         ),
-        Text('Food Blogger',
+        const Text('Food Blogger',
             style: TextStyle(fontSize: 24, color: Color(0xff323030))),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        SizedBox(
+        const SizedBox(
             width: 160,
             child: Divider(
               color: Color(0xffff5344),
             )),
-        SizedBox(
+        const SizedBox(
           height: 26,
         ),
-        Text(
-          'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nwhen an unknown printer took a galley of type and scrambled it to make a type\nspecimen book. It has survived not only five centuries.',
-          style: TextStyle(fontSize: 25, height: 2),
-          textAlign: TextAlign.center,
+        Container(
+          height: 150,
+          child: const Text(
+            'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,\nwhen an unknown printer took a galley of type and scrambled it to make a type\nspecimen book. It has survived not only five centuries.',
+            maxLines: 3,
+            style: TextStyle(fontSize: 25, height: 2),
+            textAlign: TextAlign.center,
+          ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 46,
         )
       ],

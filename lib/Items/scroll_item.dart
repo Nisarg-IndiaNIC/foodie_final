@@ -44,7 +44,7 @@ class _ScrollItemsState extends State<ScrollItems> {
             child: ListView(
               controller: scoll,
               children: [
-                InkWell(
+                GestureDetector(
                   onTap: () {
                     setState(() {
                       select = 'first';
@@ -90,7 +90,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                 const SizedBox(
                   height: 30,
                 ),
-                InkWell(
+                GestureDetector(
                   onTap: () {
                     setState(() {
                       select = 'sec';
@@ -136,7 +136,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                 const SizedBox(
                   height: 30,
                 ),
-                InkWell(
+                GestureDetector(
                   onTap: () {
                     setState(() {
                       select = 'third';
@@ -183,7 +183,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                 const SizedBox(
                   height: 30,
                 ),
-                InkWell(
+                GestureDetector(
                   onTap: () {
                     setState(() {
                       select = 'fourth';
@@ -230,7 +230,7 @@ class _ScrollItemsState extends State<ScrollItems> {
                 const SizedBox(
                   height: 30,
                 ),
-                InkWell(
+                GestureDetector(
                   onTap: () {
                     setState(() {
                       select = 'five';
@@ -351,21 +351,14 @@ class _LoginScrollState extends State<LoginScroll> {
           const SizedBox(
             height: 30,
           ),
-
           CarouselSlider(
-              items: [
-                Sliderspage(),
-                Sliderspage(),
-                Sliderspage()
-               
-              ],
+              items: [Sliderspage(), Sliderpage2(), Sliderpage3()],
               options: CarouselOptions(
                 onPageChanged: (index, reason) {
                   setState(() {
                     currentPage = index;
                   });
                 },
-              
                 viewportFraction: 1,
                 initialPage: 0,
                 enableInfiniteScroll: true,
@@ -377,83 +370,14 @@ class _LoginScrollState extends State<LoginScroll> {
                 enlargeCenterPage: true,
                 scrollDirection: Axis.horizontal,
               )),
-          // Row(
-          //   children: [
-          //     Column(
-          //       mainAxisAlignment: MainAxisAlignment.start,
-          //       crossAxisAlignment: CrossAxisAlignment.start,
-          //       children: [
-          //         Container(
-          //           padding: const EdgeInsets.all(10),
-          //           decoration: BoxDecoration(
-          //               borderRadius: BorderRadius.circular(11),
-          //               color: Colors.red.shade100),
-          //           child: const Text(
-          //             'Fastest Food Delivery Service',
-          //             style: TextStyle(color: Color(0xffff5344), fontSize: 24),
-          //           ),
-          //         ),
-          //         const SizedBox(
-          //           height: 15,
-          //         ),
-          //         const Text(
-          //           'Delivery in just\n30 minutes',
-          //           style: TextStyle(fontSize: 60, fontWeight: FontWeight.w600),
-          //         ),
-          //         const SizedBox(
-          //           height: 24,
-          //         ),
-          //         const Text(
-          //           'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
-          //           style: TextStyle(fontSize: 25, height: 1.5),
-          //         ),
-          //         const SizedBox(
-          //           height: 30,
-          //         ),
-          //         InkWell(
-          //           onTap: () {},
-          //           child: Container(
-          //             padding: const EdgeInsets.only(
-          //                 left: 55, right: 55, top: 20, bottom: 20),
-          //             decoration: BoxDecoration(
-          //               color: const Color(0xffff5344),
-          //               borderRadius: BorderRadius.circular(36),
-          //               boxShadow: const [
-          //                 BoxShadow(
-          //                   color: Color(0xffff5344),
-          //                   blurRadius: 5,
-          //                   spreadRadius: 1.0,
-          //                   offset: Offset(0.0, 2.0),
-          //                 )
-          //               ],
-          //             ),
-          //             child: const Text(
-          //               'Login',
-          //               style: TextStyle(color: Colors.white, fontSize: 24),
-          //             ),
-          //           ),
-          //         )
-          //       ],
-          //     ),
-          //     Column(
-          //       children: [
-          //         Image.asset(
-          //           'assets/bur.png',
-          //           height: 480,
-          //         )
-          //       ],
-          //     ),
-          //   ],
-          // )
         ],
       ),
     );
   }
 }
 
-
 class Sliderspage extends StatefulWidget {
-  const Sliderspage({ Key? key }) : super(key: key);
+  const Sliderspage({Key? key}) : super(key: key);
 
   @override
   _SliderspageState createState() => _SliderspageState();
@@ -462,76 +386,215 @@ class Sliderspage extends StatefulWidget {
 class _SliderspageState extends State<Sliderspage> {
   @override
   Widget build(BuildContext context) {
-    return  Row(
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(11),
-                                color: Colors.red.shade100),
-                            child: const Text(
-                              'Fastest Food Delivery Service',
-                              style: TextStyle(
-                                  color: Color(0xffff5344), fontSize: 24),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          const Text(
-                            'Delivery in just\n30 minutes',
-                            style: TextStyle(
-                                fontSize: 60, fontWeight: FontWeight.w600, height: 1.2),
-                          ),
-                          const SizedBox(
-                            height: 24,
-                          ),
-                          const Text(
-                            'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
-                            style: TextStyle(fontSize: 25, height: 1.5),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          InkWell(
-                            onTap: () {},
-                            child: Container(
-                              padding: const EdgeInsets.only(
-                                  left: 55, right: 55, top: 15, bottom: 20),
-                              decoration: BoxDecoration(
-                                color: const Color(0xffff5344),
-                                borderRadius: BorderRadius.circular(36),
-                                boxShadow: const [
-                                  BoxShadow(
-                                    color: Color(0xffff5344),
-                                    blurRadius: 5,
-                                    spreadRadius: 1.0,
-                                    offset: Offset(0.0, 2.0),
-                                  )
-                                ],
-                              ),
-                              child: const Text(
-                                'Login',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 24),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Image.asset(
-                            'assets/bur.png',
-                            height: 480,
-                          )
-                        ],
-                      ),
-                    ],
-                  );
+    return Row(
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.red.shade100),
+              child: const Text(
+                'Fastest Food Delivery Service',
+                style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const Text(
+              'Delivery in just\n30 minutes',
+              style: TextStyle(
+                  fontSize: 60, fontWeight: FontWeight.w600, height: 1.2),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            const Text(
+              'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
+              style: TextStyle(fontSize: 25, height: 1.5),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.only(
+                    left: 55, right: 55, top: 15, bottom: 20),
+                decoration: BoxDecoration(
+                  color: const Color(0xffff5344),
+                  borderRadius: BorderRadius.circular(36),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0xffff5344),
+                      blurRadius: 5,
+                      spreadRadius: 1.0,
+                      offset: Offset(0.0, 2.0),
+                    )
+                  ],
+                ),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                ),
+              ),
+            )
+          ],
+        ),
+        Column(
+          children: [
+            Image.asset(
+              'assets/bur.png',
+              height: 480,
+            )
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class Sliderpage2 extends StatefulWidget {
+  const Sliderpage2({Key? key}) : super(key: key);
+
+  @override
+  _Sliderpage2State createState() => _Sliderpage2State();
+}
+
+class _Sliderpage2State extends State<Sliderpage2> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.red.shade100),
+              child: const Text(
+                'Enjoy the Delicious Food',
+                style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const Text(
+              'Get scrumptious\nfood feel. ',
+              style: TextStyle(
+                  fontSize: 60, fontWeight: FontWeight.w600, height: 1.2),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            const Text(
+              'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
+              style: TextStyle(fontSize: 25, height: 1.5),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            Image.asset(
+              'assets/bur.png',
+              height: 480,
+            )
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class Sliderpage3 extends StatefulWidget {
+  const Sliderpage3({Key? key}) : super(key: key);
+
+  @override
+  _Sliderpage3State createState() => _Sliderpage3State();
+}
+
+class _Sliderpage3State extends State<Sliderpage3> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(11),
+                  color: Colors.red.shade100),
+              child: const Text(
+                'Join Us',
+                style: TextStyle(color: Color(0xffff5344), fontSize: 24),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const Text(
+              'Register now to\nget special deal',
+              style: TextStyle(
+                  fontSize: 60, fontWeight: FontWeight.w600, height: 1.2),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            const Text(
+              'Lorem Ipsum has been the industrys\nstandard dummy text ever since the\nwhen unknown printer.',
+              style: TextStyle(fontSize: 25, height: 1.5),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                padding: const EdgeInsets.only(
+                    left: 55, right: 55, top: 15, bottom: 20),
+                decoration: BoxDecoration(
+                  color: const Color(0xffff5344),
+                  borderRadius: BorderRadius.circular(36),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0xffff5344),
+                      blurRadius: 5,
+                      spreadRadius: 1.0,
+                      offset: Offset(0.0, 2.0),
+                    )
+                  ],
+                ),
+                child: const Text(
+                  'Sign Up',
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                ),
+              ),
+            )
+          ],
+        ),
+        Column(
+          children: [
+            Image.asset(
+              'assets/bur.png',
+              height: 480,
+            )
+          ],
+        ),
+      ],
+    );
   }
 }
